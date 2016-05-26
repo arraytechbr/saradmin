@@ -74,6 +74,8 @@ class Reports::MembrosContribuicoesController < ApplicationController
         WHERE cm.membro_id = m.id
       )" unless @celula_id.nil? or @celula_id.empty? or @celula_id == "0"
 
+    sql = "#{sql} ORDER BY p.nome"
+
     @records = []
 
     ActiveRecord::Base.connection.execute(sql).each do |r|
