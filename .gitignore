@@ -63,3 +63,4 @@ crashlytics-build.properties
 
 # Ruby version config
 .ruby-version
+.ruby-gemset
